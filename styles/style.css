@@ -1,0 +1,165 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+/* *********************** */
+/* End CSS reset */
+/* *********************** */
+:root {
+    /* Primary */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    /* Neutral */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    /* Shades */
+    --dark-teal: #1a4031;
+}
+html {
+    font-size: 62.5%;
+    font-family: "Montserrat", sans-serif; /* fw 500 700*/
+    /* font-family: "Fraunces"; fw 500 */
+}
+body {
+    background-color: var(--cream);
+    display: flex;
+    align-items: center;
+}
+.center {
+    margin: 0 auto;
+}
+.product-card {
+    max-width: 144rem;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 30rem);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.product-img {
+    width: 30rem;
+}
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+}
+.product-category {
+    color: var(--dark-grayish-blue);
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+}
+.product-name {
+    font-family: "Fraunces";
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 1;
+    color: var(--very-dark-blue);
+}
+.product-description {
+    color: var(--dark-grayish-blue);
+    font-size: 1.4rem;
+    line-height: 1.6;
+    max-width: 25ch;
+}
+.product-price-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.product-price {
+    font-family: "Fraunces";
+    color: var(--dark-cyan);
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+.product-price-old {
+    color: var(--dark-grayish-blue);
+    font-size: 1.2rem;
+    text-decoration: line-through;
+}
+.buy-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buy-btn:link,
+.buy-btn:visited {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    background-color: var(--dark-cyan);
+
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    padding: 1.4rem;
+    border-radius: 1rem;
+}
+.buy-btn:hover,
+.buy-btn:active {
+    cursor: pointer;
+    background-color: var(--dark-teal);
+}
